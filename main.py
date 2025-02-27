@@ -9,12 +9,6 @@ def Unzip(zip_path):
     extract_path = r"C:\SWIFT\Program\ADB\MyProgramTest\ExtractedFiles" + "\\" + output_folder_name  # Destination folder
     print(extract_path)
 
-    
-    output_folders = [
-        os.path.join(extract_path, file)
-        for file in os.listdir()
-    ]
-
     # Extract ZIP
     try:
         with zipfile.ZipFile(zip_path, 'r') as zip_ref:
